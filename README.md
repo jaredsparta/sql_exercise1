@@ -40,12 +40,12 @@
     CREATE TABLE bookings(
           booking_id INT NOT NULL IDENTITY(1,1) PRIMARY KEY,
           user_id INT NOT NULL,
-          ebook_title VARCHAR(100),
+          ebook_id INT NOT NULL,
           date_rented DATETIME,
           price DECIMAL(5,2),
           CONSTRAINT fk_booking_user
-              FOREIGN KEY (user_id)
-              REFERENCES users(user_id)
+              FOREIGN KEY (user_id, ebook_id)
+              REFERENCES users(user_id), ebooks(ebook_id)
       );
 
     CREATE TABLE ebooks(
