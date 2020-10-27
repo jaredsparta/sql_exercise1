@@ -17,7 +17,7 @@
 1. Shown in picture.
 2. Shown in picture.
 3. Users can rent out books.
-4. There are three 1:N relationships shown.
+4. There are two 1:N relationships shown.
 5. We have one N:N relationship.
 
 ---
@@ -86,6 +86,8 @@
 
 
 - The booking ids begin at 12 because there was syntax errors when inputting bookings. So even if an insert fails, the booking id still increments.
+
+<br>
 
 ---
 **Used:**
